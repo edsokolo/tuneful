@@ -70,14 +70,14 @@
     <!-- Handlebars templates -->
     <script id="song-list-template" type="text/x-handlebars-template">
         <ul>
-            {{#each songs}}
+            {% for file in files %}
             <li>
                 <a href="#" class="song" data-id="{{ id }}"
                    data-path="{{ file.path }}">
                     {{ file.name }}
                 </a>
             </li>
-            {{/each}}
+            {% endfor %}
             <li>
                 <a href="#" id="add-button">
                     <i class="fa fa-plus"></i>
